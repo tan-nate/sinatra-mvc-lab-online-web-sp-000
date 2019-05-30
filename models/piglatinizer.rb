@@ -2,17 +2,17 @@ class PigLatinizer
 
   def piglatinize(text)
     text_words = text.split(" ")
-    binding.pry
+    #binding.pry
 
     text_words.collect! do |word|
-      text_a = text.split("")
-      if !text_a[0].downcase.match?(/[aeoui]/)
-        until text_a[0].downcase.match?(/[aeiou]/)
-          text_a << text_a.shift
+      word_a = word.split("")
+      if !word_a[0].downcase.match?(/[aeoui]/)
+        until word_a[0].downcase.match?(/[aeiou]/)
+          word_a << word_a.shift
         end
-        text_a.join << "ay"
+        word_a.join << "ay"
       else
-        text << "way"
+        word << "way"
       end
     end
 
