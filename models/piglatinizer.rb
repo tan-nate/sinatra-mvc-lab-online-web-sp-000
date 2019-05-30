@@ -2,6 +2,7 @@ class PigLatinizer
 
   def piglatinize(text)
     text_words = text.split(" ")
+    binding.pry
 
     text_words.collect! do |word|
       text_a = text.split("")
