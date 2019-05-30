@@ -1,11 +1,9 @@
 class PigLatinizer
   def piglatinize(text)
     text_a = text.split("")
-
-    if !text_a[0].match?(/[aeoui]/)
-      until text_a[0].match?(/[aeiou]/)
+    if !text_a[0].downcase.match?(/[aeoui]/)
+      until text_a[0].downcase.match?(/[aeiou]/)
         text_a << text_a.shift
-        binding.pry
       end
       text_a.join << "ay"
     else
