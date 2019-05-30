@@ -5,6 +5,7 @@ class PigLatinizer
     if !text_a[0].match?(/[aeoui]/)
       until text_a[0].match?(/[aeiou]/)
         text_a << text_a.shift
+        binding.pry
       end
       text_a.join << "ay"
     else
